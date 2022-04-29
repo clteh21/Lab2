@@ -1,3 +1,5 @@
+import statistics
+
 def display_main_menu():
     print("Enter some numbers seperated by commas")
 
@@ -21,13 +23,16 @@ def calc_min_max_temperature(numbersss):
     print("The maximum is " ,maximum)
     print("The minimum is ", minimum)
 
-
+def calc_median_temperature(numbersss):
+    MID = statistics.median(numbersss)
+    print("The median is ", MID)
 
 def main():
     display_main_menu()
     numbersss = get_user_input()
     calc_average_temperature(numbersss)
     calc_min_max_temperature(numbersss)
+    calc_median_temperature(numbersss)
 
 
 
